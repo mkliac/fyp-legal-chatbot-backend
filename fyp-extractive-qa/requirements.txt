@@ -1,0 +1,7 @@
+docx2txt
+pdf2image
+pytesseract
+Pillow
+torch
+transformers
+fastapi

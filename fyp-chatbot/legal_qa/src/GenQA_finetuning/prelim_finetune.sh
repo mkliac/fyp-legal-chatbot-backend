@@ -1,0 +1,18 @@
+python3 run_summarization.py \
+    --model_name_or_path facebook/bart-large \
+    --do_train \
+    --do_eval \
+    --train_file /home/data/jchengaj/datasets/MSMARCO_processed/train_v1.1_small.json \
+    --validation_file /home/data/jchengaj/datasets/MSMARCO_processed/dev_v1.1_small.json \
+    --text_column text \
+    --summary_column summary \
+    --output_dir /data/jchengaj/gen-qa-summarization \
+    --per_device_train_batch_size=10 \
+    --per_device_eval_batch_size=10 \
+    --overwrite_output_dir \
+    --learning_rate 5e-06 \
+    --num_beams 4 \
+    --max_source_length 512 \
+    --max_target_length 128 \
+    --seed 2021\
+    --predict_with_generate
